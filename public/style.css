@@ -254,10 +254,6 @@ section.tarifs .container{
     color: var(--light);
 }
 
-.tarif-card:nth-child(2) h4,.tarif-card:nth-child(2):hover h4 {
-    color: var(--dark);
-}
-
 .tarif-card i {
     color: var(--white);
     font-style: normal;
@@ -335,10 +331,7 @@ section.map .zone{
 section.map h2.title{text-align: center;}
 section.map .zone iframe{
     width: 100%;
-    filter: grayscale(1) invert(1);
-    transition: all .3s linear;
 }
-
 section.map .zone:hover iframe {
     filter: grayscale(0) invert(0);
 }
@@ -351,7 +344,6 @@ section.infos .item{
     text-align: left;
     gap: 20px;
 }
-
 section.infos .item div {
     display: flex;
     flex-direction: column;
@@ -376,7 +368,6 @@ section.infos .item h3{
 section.infos .item a {
     color: var(--white);
 }
-section.infos .item p{}
 section.infos .item form{
     margin-top: 15px;
 }
@@ -395,7 +386,6 @@ section.infos .item form input{
     letter-spacing: 1px;
     transition: all .3s linear;
 }
-
 section.infos .item form input[type="mail"]{
     background: #f5f5f51a;
     color: var(--white);
@@ -409,7 +399,6 @@ section.infos .item form input[type="submit"]{
     cursor: pointer;
     text-transform: uppercase;
 }
-
 section.infos .item form input[type="submit"]:hover {
     background: var(--dark);
     color: var(--white);
@@ -502,40 +491,39 @@ section.footer-2 i {
     font-size: 20px;
     padding: 0 0 0 5px;
 }
-
 /* mobile first */
 @media(max-width: 991px){
+    .navbar{padding: 2% 5%;}
     header .burger{display: flex;align-items: center;font-size: 40px;}
     .closeBtn{display: block;position: absolute;top: 30px;color: var(--light);font-size: 40px;}
-    header nav ul{position: fixed;flex-direction: column;background: var(--dark);width: 100%;left: 0;height: 100vh;z-index: -1;align-items: center;justify-content: center;transition: all .3s linear;opacity: 0;top: 0;}
-    header nav ul.opened{opacity: 1;z-index: 9;}
+    header nav ul.flex{position: fixed;flex-direction: column;background: var(--dark);width: 100%;left: 0;height: 100vh;z-index: -1;align-items: center;justify-content: center;transition: all .3s linear;opacity: 0;top: 0;display: none;}
+    header nav ul.flex.opened{display: flex;opacity: 1;z-index: 9;}
     header ul li a{font-size: 30px;}
     .banner .img-banner,.jumbotron span{display: none;}
-    .banner{display: flex;padding: 10%;min-height: 500px;}
+    .banner{display: flex;padding: 20% 5% 0;min-height: 500px;}
     .banner .slogan h1{font-size: 50px;}
     .banner .slogan p{font-size: 18px;}
     main section.partners .container{flex-wrap: wrap;gap: 10px;align-items: center;justify-content: center;}
     :root{--title-size: 2em;}
-    main section.about .jumbotron,main section.atout .container,section.tarifs .container,section.news .container,
+    main section.about .jumbotron,section.tarifs .container,section.news .container,
     .footer-1,section.infos{flex-direction: column;}
+    main section.atout .container{flex-wrap: wrap;}
     main section.partners .container .img{width: 45%;border: 1px solid #ffffff2b;padding: 10px;}
     main section.about{grid-template-columns: 1fr;grid-gap: 40px;}
     .img-bloc{height: 100%;}
     h2.title{text-align: center;gap: 10px;display: flex;flex-direction: column;}
     .tarif-card,.item-new,.default-card,footer .bloc{width: 100%;}
-    .tarif-card:nth-child(2) {
-    transform: scale(1) !important;}
+    .tarif-card:nth-child(2){transform: scale(1) !important;}
     .tarif-card:nth-child(2){transform: scale(1);}    
-    section.news .container{gap: 50px;}
+    section.news .container{gap: 50px;width: 100%;}
     main section{padding: 10% 5%;}
     section.infos{align-items: flex-start;padding: 10% 5%;}
     footer{padding: 5%;}
     .footer-2{flex-direction: column;gap: 13px;padding: 4% 0 4%;text-align: center;}
     .banner .slogan{gap: 15px;}
     main section.stats .item-count{width: 100%;align-items: center;justify-content: center;border: 1px solid #c28f0445;opacity: 1;padding: 20px;}
-    main section.stats{display: grid;grid-template-columns: 1fr 1fr;}
+    main section.stats{display: grid;grid-template-columns: 1fr 1fr;grid-gap: 20px;padding: 5%;}
     main section.stats .item-count span:nth-child(1){font-size: 4em;}
-    main section.stats{gap: 20px;}
 }
 @media(min-width: 576px){}
 @media(min-width: 991px){}
